@@ -1,14 +1,23 @@
 .footer {
+  @include tablet-993 {
+    padding: 25px 0 36px 0;
+  }
+
   &_bottom {
     padding: 11px 0;
     border-top: 1px solid $color-white-2;
+
+    @include tablet-993 {
+      border: none;
+    }
+
     .container {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 13px;
 
-      @include tablet-768 {
+      @include tablet-993 {
         flex-direction: column;
       }
     }
@@ -22,6 +31,12 @@
       display: flex;
       justify-content: space-between;
       gap: 40px;
+
+      @include tablet-993 {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+      }
     }
   }
 
@@ -36,11 +51,36 @@
       height: 100%;
       width: 1px;
       background: $color-white-2;
+
+      @include tablet-993 {
+        display: none;
+      }
     }
   }
 
   &_block {
     padding: 35px 0 23px 0;
+
+    @include tablet-993 {
+      padding: 12px 0;
+      position: relative;
+      width: 100%;
+    }
+
+    &::before {
+      display: none;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -25px;
+      height: 1px;
+      width: calc(100% + 50px);
+      background: $color-white-2;
+
+      @include tablet-993 {
+        display: block;
+      }
+    }
 
     h6 {
       font-family: $font-FrizQuadrataCTT;
@@ -49,6 +89,11 @@
       line-height: 26.18px;
       color: $color-dark-2;
       margin-bottom: 25px;
+
+      @include tablet-993 {
+        text-align: center;
+        margin-bottom: 5px;
+      }
 
       span {
         display: block;
@@ -62,17 +107,41 @@
     flex-direction: column;
     gap: 5px;
 
+    @include tablet-993 {
+      align-items: center;
+      gap: 3px;
+    }
+
     a {
       font-size: 15px;
       font-weight: 400;
       line-height: 18.4px;
       color: $color-white-3;
+
+      br {
+        @include tablet-993 {
+          display: none;
+        }
+      }
+
+      @include tablet-993 {
+        text-align: center;
+      }
     }
   }
 
   &_left {
     display: flex;
     flex-direction: column;
+
+    &::before {
+      display: none;
+    }
+
+    @include tablet-993 {
+      align-items: center;
+      text-align: center;
+    }
 
     p {
       font-size: 15px;
@@ -87,6 +156,10 @@
       line-height: 18.4px;
       color: $color-white-4;
       margin: 5px 0 13px 0;
+
+      @include tablet-993 {
+        margin: 6px 0 2px 0;
+      }
     }
 
     a {
@@ -98,7 +171,6 @@
       text-decoration-style: solid;
       text-underline-position: from-font;
       text-decoration-skip-ink: none;
-
     }
   }
 
