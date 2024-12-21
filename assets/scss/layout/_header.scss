@@ -1,0 +1,129 @@
+.header {
+  padding: 20px 0;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &_left {
+    display: flex;
+    align-items: center;
+    gap: 52px;
+  }
+
+  &_right {
+    display: flex;
+    align-items: center;
+    gap: 37px;
+
+    a {
+      font-family: $font-Lato;
+      font-size: 18px;
+      font-weight: 900;
+      line-height: 22.09px;
+      color: $color-dark-2;
+
+      @include tablet-993 {
+        display: none;
+      }
+    }
+  }
+
+  &_icons {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+
+    @include tablet-993 {
+      gap: 16px;
+    }
+
+    a {
+      svg {
+        @include tablet-993 {
+          width: 17px;
+          height: 17px;
+          flex-shrink: 0;
+        }
+      }
+
+      @include tablet-993 {
+        display: flex;
+      }
+    }
+  }
+
+  &_logo {
+    display: flex;
+    align-items: center;
+
+    img {
+      flex-shrink: 0;
+    }
+
+    &_text {
+      text-align: center;
+    }
+
+    span {
+      font-family: $font-FrizQuadrataCTT;
+      font-size: 9px;
+      font-weight: 400;
+      line-height: 11.04px;
+      color: $color-dark;
+
+      @include tablet-993 {
+        font-size: 7px;
+        line-height: 8px;
+      }
+    }
+
+    h6 {
+      font-family: $font-FrizQuadrataCTT;
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 36.81px;
+      color: $color-dark;
+
+      @include tablet-993 {
+        font-size: 25px;
+        line-height: 30px;
+      }
+    }
+  }
+
+  .burger_btn {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-right: 33px;
+
+    @include tablet-993 {
+      display: flex;
+    }
+  }
+
+  &_link {
+    display: flex;
+    align-items: center;
+    gap: 52px;
+
+    @include desktop-1200 {
+      gap: 25px;
+    }
+
+    @include tablet-993 {
+      display: none;
+    }
+
+    a {
+      font-family: $font-Lato;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 22.09px;
+      color: $color-grey-dark;
+    }
+  }
+}
