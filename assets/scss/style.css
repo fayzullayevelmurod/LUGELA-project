@@ -875,6 +875,7 @@ address {
 }
 .faq .accordion-item {
   box-shadow: 1px 4px 12px 0px rgba(0, 0, 0, 0.1294117647);
+  border-radius: 3px;
 }
 .faq .accordion-item:last-child {
   border-bottom: none;
