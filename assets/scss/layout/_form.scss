@@ -1,0 +1,102 @@
+.form {
+  background: linear-gradient(77.02deg, #C6DEB5 1.42%, #E5F2C6 50.35%, #C1DBB2 94.44%);
+  padding: 90px 0;
+  position: relative;
+  overflow: hidden;
+
+  &_desktop_one {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    @include tablet-993 {
+      display: none;
+    }
+  }
+
+  &_desktop_two {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    @include tablet-993 {
+      display: none;
+    }
+  }
+
+  &_media_one {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  &_media_two {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  @include tablet-993 {
+    padding: 87px 0 209px 0;
+  }
+
+  &_text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+
+    @include tablet-993 {
+      gap: 15px;
+    }
+  }
+
+  .main_btn {
+    @include tablet-993 {
+      max-width: 196px;
+    }
+  }
+
+  h6 {
+    font-family: $font-FrizQuadrataCTT;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 61.35px;
+    text-align: center;
+    color: $color-dark-2;
+
+    span {
+      font-display: swap !important;
+      margin: 0 auto;
+      width: max-content;
+      display: block;
+      padding: 0 30px;
+      background: $color-white;
+      border-radius: 30px;
+
+      @include tablet-993 {
+        display: inline;
+      }
+    }
+  }
+
+  p {
+    max-width: 710px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 30.5px;
+    color: #656565;
+
+    @include tablet-993 {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  .main_btn {
+    margin: 0 auto;
+  }
+}

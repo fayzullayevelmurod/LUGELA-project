@@ -727,6 +727,234 @@ address {
   font-family: 700;
 }
 
+.form {
+  background: linear-gradient(77.02deg, #C6DEB5 1.42%, #E5F2C6 50.35%, #C1DBB2 94.44%);
+  padding: 90px 0;
+  position: relative;
+  overflow: hidden;
+}
+.form_desktop_one {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+@media (max-width: 993px) {
+  .form_desktop_one {
+    display: none;
+  }
+}
+.form_desktop_two {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+@media (max-width: 993px) {
+  .form_desktop_two {
+    display: none;
+  }
+}
+.form_media_one {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.form_media_two {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+@media (max-width: 993px) {
+  .form {
+    padding: 87px 0 209px 0;
+  }
+}
+.form_text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 993px) {
+  .form_text {
+    gap: 15px;
+  }
+}
+@media (max-width: 993px) {
+  .form .main_btn {
+    max-width: 196px;
+  }
+}
+.form h6 {
+  font-family: "FrizQuadrataCTT";
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 61.35px;
+  text-align: center;
+  color: #2E2E2E;
+}
+.form h6 span {
+  font-display: swap !important;
+  margin: 0 auto;
+  width: -moz-max-content;
+  width: max-content;
+  display: block;
+  padding: 0 30px;
+  background: #FFFFFF;
+  border-radius: 30px;
+}
+@media (max-width: 993px) {
+  .form h6 span {
+    display: inline;
+  }
+}
+.form p {
+  max-width: 710px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 30.5px;
+  color: #656565;
+}
+@media (max-width: 993px) {
+  .form p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+.form .main_btn {
+  margin: 0 auto;
+}
+
+.faq {
+  padding: 74px 0 126px 0;
+  position: relative;
+  overflow: hidden;
+}
+.faq .faq_top_img {
+  position: absolute;
+  top: -85px;
+  right: -386px;
+}
+.faq .faq_bottom_img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.faq .faq_bottom_left {
+  position: absolute;
+  bottom: 44px;
+  left: 54px;
+}
+@media (max-width: 993px) {
+  .faq {
+    padding: 35px 0 77px 0;
+  }
+}
+.faq .main_title {
+  margin-bottom: 30px;
+}
+@media (max-width: 993px) {
+  .faq .main_title {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+}
+.faq .accordion-container {
+  padding: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+@media (max-width: 993px) {
+  .faq .accordion-container {
+    gap: 10px;
+  }
+}
+.faq .accordion-item {
+  box-shadow: 1px 4px 12px 0px rgba(0, 0, 0, 0.1294117647);
+}
+.faq .accordion-item:last-child {
+  border-bottom: none;
+}
+.faq .accordion-item .accordion-header {
+  background: #FFFFFF;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  cursor: pointer;
+  box-shadow: 1px 4px 12px 0px rgba(0, 0, 0, 0.1294117647);
+  position: relative;
+  z-index: 4;
+  border-radius: 3px;
+}
+@media (max-width: 993px) {
+  .faq .accordion-item .accordion-header {
+    padding: 9px 16px;
+  }
+}
+.faq .accordion-item .accordion-header span {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 27.14px;
+  color: #363636;
+}
+@media (max-width: 993px) {
+  .faq .accordion-item .accordion-header span {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 993px) {
+  .faq .accordion-item .accordion-header svg {
+    width: 23px;
+    height: 23px;
+  }
+}
+.faq .accordion-item .accordion-header .accordion-icon {
+  transition: transform 0.3s;
+}
+.faq .accordion-item .accordion-header .accordion-icon_two {
+  display: none;
+}
+.faq .accordion-item .accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  background-color: #FFFFFF;
+  font-size: 14px;
+  line-height: 1.6;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+.faq .accordion-item .accordion-content p {
+  margin: 15px 0;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 27.2px;
+  color: #363636;
+}
+@media (max-width: 993px) {
+  .faq .accordion-item .accordion-content p {
+    margin: 5px 0;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+.faq .accordion-item.active .accordion-content {
+  max-height: 1000px;
+  padding: 15px 20px;
+}
+.faq .accordion-item.active .accordion-icon {
+  display: none;
+}
+.faq .accordion-item.active .accordion-icon_two {
+  display: block;
+}
+
 @media (max-width: 993px) {
   .footer {
     padding: 25px 0 36px 0;

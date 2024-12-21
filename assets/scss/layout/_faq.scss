@@ -1,0 +1,138 @@
+.faq {
+  padding: 74px 0 126px 0;
+  position: relative;
+  overflow: hidden;
+
+  .faq_top_img {
+    position: absolute;
+    top: -85px;
+    right: -386px;
+  }
+
+  .faq_bottom_img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .faq_bottom_left {
+    position: absolute;
+    bottom: 44px;
+    left: 54px;
+  }
+
+  @include tablet-993 {
+    padding: 35px 0 77px 0;
+  }
+
+  .main_title {
+    margin-bottom: 30px;
+
+    @include tablet-993 {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+  }
+
+  .accordion-container {
+    padding: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+
+    @include tablet-993 {
+      gap: 10px;
+    }
+  }
+
+  .accordion-item {
+    box-shadow: 1px 4px 12px 0px #00000021;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .accordion-header {
+      background: $color-white;
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      cursor: pointer;
+      box-shadow: 1px 4px 12px 0px #00000021;
+      position: relative;
+      z-index: 4;
+      border-radius: 3px;
+
+      @include tablet-993 {
+        padding: 9px 16px;
+      }
+
+      span {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 27.14px;
+        color: #363636;
+
+        @include tablet-993 {
+          font-size: 16px;
+          line-height: 20px;
+        }
+      }
+
+      svg {
+        @include tablet-993 {
+          width: 23px;
+          height: 23px;
+        }
+      }
+
+      .accordion-icon {
+        transition: transform 0.3s;
+      }
+
+      .accordion-icon_two {
+        display: none;
+      }
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 20px;
+      background-color: $color-white;
+      font-size: 14px;
+      line-height: 1.6;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+
+      p {
+        margin: 15px 0;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 27.2px;
+        color: #363636;
+
+        @include tablet-993 {
+          margin: 5px 0;
+          font-size: 14px;
+          line-height: 16px;
+        }
+      }
+    }
+
+    &.active .accordion-content {
+      max-height: 1000px;
+      padding: 15px 20px;
+    }
+
+    &.active .accordion-icon {
+      display: none;
+    }
+
+    &.active .accordion-icon_two {
+      display: block;
+    }
+  }
+}
