@@ -1,0 +1,13 @@
+.treatment {
+  padding: 70px 0;
+
+  @include tablet-993 {
+    padding: 82px 0 55px 0;
+  }
+
+  .main_title {
+    @include tablet-993 {
+      text-align: center;
+    }
+  }
+}

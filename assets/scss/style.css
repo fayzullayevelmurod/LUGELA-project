@@ -569,6 +569,20 @@ address {
   }
 }
 
+.treatment {
+  padding: 70px 0;
+}
+@media (max-width: 993px) {
+  .treatment {
+    padding: 82px 0 55px 0;
+  }
+}
+@media (max-width: 993px) {
+  .treatment .main_title {
+    text-align: center;
+  }
+}
+
 @media (max-width: 993px) {
   .footer {
     padding: 25px 0 36px 0;
