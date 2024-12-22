@@ -17,6 +17,28 @@ burger_btn.addEventListener('click', () => {
 })
 // burger
 
+// modal
+let home_modal_btn = document.querySelector('.home_modal_btn');
+let home_modal = document.querySelector('.home_modal');
+let home_modal_bg = document.querySelector('.home_modal_bg');
+let home_modal_close = document.querySelector('.home_modal_close');
+
+home_modal_btn.addEventListener('click', () => {
+  home_modal.classList.add('active');
+  home_modal_bg.classList.add('active');
+})
+
+home_modal_bg.addEventListener('click', () => {
+  home_modal.classList.remove('active');
+  home_modal_bg.classList.remove('active');
+})
+
+home_modal_close.addEventListener('click', () => {
+  home_modal.classList.remove('active');
+  home_modal_bg.classList.remove('active');
+})
+// modal
+
 
 let swiper = new Swiper(".commentSwiper", {
   slidesPerView: 1,
