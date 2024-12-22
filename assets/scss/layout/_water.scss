@@ -1,0 +1,121 @@
+.water {
+    .container {
+        padding-top: 91px;
+        padding-bottom: 171px;
+        padding-left: 592px;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        @include tablet-993 {
+            padding-left: 20px;
+            padding-top: 34px;
+            padding-bottom: 52px;
+            align-items: center;
+        }
+    }
+
+    h2 {
+        font-family: $font-FrizQuadrataCTT;
+        font-weight: 400;
+        font-size: 50px;
+        line-height: 104.7%;
+        color: #2E2E2E;
+
+        @include tablet-993 {
+            max-width: 275px;
+            text-align: center;
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+    }
+
+    h4 {
+        font-size: 20px;
+        line-height: 122.7%;
+        font-weight: 400;
+        color: #9B9B9C;
+        margin-bottom: 13px;
+
+        @include tablet-993 {
+            font-size: 16px;
+            line-height: 20px;
+            margin-bottom: 341px;
+            text-align: center;
+        }
+    }
+
+    .main-img {
+        position: absolute;
+        z-index: -1;
+        width: 719px;
+        min-width: 719px;
+        top: 0;
+        left: -140px;
+        display: none;
+    }
+
+    p {
+        color: #656565;
+        font-size: 20px;
+        line-height: 122%;
+        max-width: 535px;
+        margin-bottom: 15px;
+        width: 100%;
+
+        @include tablet-993 {
+            text-align: center;
+            max-width: 650px;
+            margin-bottom: 14px;
+        }
+    }
+
+    h3 {
+        font-size: 40px;
+        line-height: 113.7%;
+        font-family: $font-PT-Serif;
+        font-weight: 400;
+        margin-bottom: 1px;
+    }
+
+    h5 {
+        color: #9B9B9C;
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 5px;
+    }
+
+    .calculation {
+        border: 1px solid #D8D8D8;
+        display: inline-flex;
+        align-items: stretch;
+        margin-bottom: 20px;
+        
+        button {
+            width: 50px;
+            height: 46px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        span {
+            width: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            font-family: $font-PT-Serif;
+            border: 1px solid #D8D8D8;
+            border-top: 0;
+            border-bottom: 0;
+        }
+    }
+
+    .main_btn {
+        display: inline-flex;
+        padding: 0 50px;
+    }
+}
