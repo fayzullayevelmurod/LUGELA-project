@@ -54,7 +54,23 @@
         min-width: 719px;
         top: 0;
         left: -140px;
-        // display: none;
+        
+        @include tablet-993 {
+            display: none;
+            width: 516px;
+            min-width: 516px;
+            left: 50%;
+            top: 190px;
+            transform: translateX(calc(-50% + 65px));
+        }
+
+        &.sm {
+            display: none;
+
+            @include tablet-993 {
+                display: block;
+            }
+        }
     }
 
     p {
@@ -85,6 +101,11 @@
         font-size: 20px;
         font-weight: 400;
         margin-bottom: 5px;
+
+        @include tablet-993 {
+            margin-bottom: 6px;
+            font-size: 16px;
+        }
     }
 
     .calculation {
