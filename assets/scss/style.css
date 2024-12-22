@@ -823,7 +823,7 @@ address {
 @media (max-width: 993px) {
   .about-left ul {
     width: 50%;
-    padding-right: 20px;
+    padding-left: 22px;
   }
 }
 .about-left ul:nth-child(1) {
@@ -834,7 +834,7 @@ address {
   .about-left ul:nth-child(1) {
     text-align: left;
     width: 50%;
-    padding-right: 20px;
+    padding-left: 0;
   }
 }
 .about-left ul h4 {
@@ -1161,6 +1161,24 @@ address {
   top: 0;
   left: -140px;
 }
+@media (max-width: 993px) {
+  .water .main-img {
+    display: none;
+    width: 516px;
+    min-width: 516px;
+    left: 50%;
+    top: 190px;
+    transform: translateX(calc(-50% + 65px));
+  }
+}
+.water .main-img.sm {
+  display: none;
+}
+@media (max-width: 993px) {
+  .water .main-img.sm {
+    display: block;
+  }
+}
 .water p {
   color: #656565;
   font-size: 20px;
@@ -1188,6 +1206,12 @@ address {
   font-size: 20px;
   font-weight: 400;
   margin-bottom: 5px;
+}
+@media (max-width: 993px) {
+  .water h5 {
+    margin-bottom: 6px;
+    font-size: 16px;
+  }
 }
 .water .calculation {
   border: 1px solid #D8D8D8;
