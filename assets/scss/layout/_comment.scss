@@ -1,0 +1,196 @@
+.comment {
+  position: relative;
+  padding: 74px 0 50px 0;
+
+  @include tablet-993 {
+    padding: 35px 0 65px 0;
+  }
+
+  .main_title {
+    margin-bottom: 50px;
+    text-align: center;
+
+    @include tablet-993 {
+      margin-bottom: 20px;
+    }
+  }
+
+  &_more_btn {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    border-radius: 36px;
+    border: 1px solid #ADADAD;
+    width: 360px;
+    height: 72px;
+    margin: 48px auto 0 auto;
+
+    @include tablet-993 {
+      width: 237px;
+      gap: 12px;
+      margin: 30px auto 0 auto;
+    }
+
+    img {
+      transform: translateX(-2px);
+    }
+
+    span {
+      font-family: $font-OpenSans;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 25.44px;
+      color: $color-black;
+
+      @include tablet-993 {
+        font-size: 16px;
+        line-height: 17px;
+        font-weight: 400;
+
+      }
+    }
+  }
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    transition: .3s linear;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(1.8px)
+    }
+
+    img {
+      width: 100%;
+      height: 390px;
+      object-fit: contain;
+    }
+  }
+
+  .swiper-slide-active {
+    &::before {
+      backdrop-filter: blur(0px)
+    }
+  }
+
+  .commentSwiper {
+    overflow: visible;
+    position: relative;
+  }
+
+  .comment-button-prev {
+    svg {
+      margin-right: 5px;
+    }
+  }
+
+  .comment-button-next {
+    svg {
+      margin-left: 5px;
+    }
+  }
+
+  &_btns {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+    position: absolute;
+    max-width: 840px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    @include tablet-993 {
+      margin-top: 17px;
+      position: static;
+      justify-content: center;
+    }
+  }
+
+  .comment_btn {
+    position: relative;
+    z-index: 4;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: rgba(186, 198, 179, 0.53);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s linear;
+
+    @include tablet-993 {
+      width: 33px;
+      height: 33px;
+
+      svg {
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+    &:hover {
+      box-shadow: 0px 4px 8px 0px rgba(195, 206, 189, 0.46);
+      background: #BAC6B3D9;
+
+      svg {
+        path {
+          fill: #6D855F;
+        }
+      }
+    }
+
+    &:active {
+      background: #BAC6B3;
+
+      svg {
+        path {
+          fill: #5B764B;
+        }
+      }
+    }
+  }
+
+  &-pagination {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    @include tablet-993 {
+      gap: 4px;
+      margin-top: 11px;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    margin: 0 !important;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #5B764B66;
+    opacity: 1;
+
+    @include tablet-993 {
+      width: 6px;
+      height: 6px;
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #5B764B;
+  }
+}
