@@ -42,3 +42,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// Calculation
+const calculations = document.querySelectorAll('.calculation');
+
+if (calculations.length) {
+  calculations.forEach(el => {
+    const minus = el.querySelector('.minus');
+    const plus = el.querySelector('.plus');
+    const text = el.querySelector('span');
+
+    plus.onclick = () => {
+      text.textContent = +text.textContent + 1;
+    }
+
+    minus.onclick = () => {
+      if (+text.textContent != 1) {
+        text.textContent = +text.textContent - 1;
+      }
+    }
+  })
+}
+// Calculation end
