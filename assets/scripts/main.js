@@ -1,12 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const gallery = document.querySelector('.lightgallery');
-  if (gallery) {
-      lightGallery(gallery, {
-          plugins: [lgThumbnail, lgZoom],
-          speed: 500,
-      });
-  }
-});
 
 // burger
 let media_menu = document.querySelector('.media_menu');
@@ -81,3 +72,38 @@ if (calculations.length) {
   })
 }
 // Calculation end
+
+let certificates_img = document.querySelectorAll('.certificates_block_img');
+if (certificates_img.length) {
+  certificates_img.forEach((el, elID) => {
+    let img = el.querySelector('img');
+    el.onclick = e => {
+      e.preventDefault();
+      let src = [];
+      certificates_img.forEach(item => {
+        src.push({
+          'src': item.querySelector('img').getAttribute('src'),
+          'thumb': item.querySelector('img').getAttribute('src'),
+          'subHtml': '',
+        });
+      })
+      if (document.querySelector('#lightgallery')) {
+        document.querySelector('#lightgallery').remove();
+      }
+      const galleryContainer = document.createElement('div');
+      galleryContainer.id = 'lightgallery';
+      document.body.appendChild(galleryContainer);
+      lightGallery(galleryContainer, {
+        'data-size': '1600x1200',
+        dynamic: true,
+        dynamicEl: src,
+        index: elID,
+        thumbnail: true,
+        zoomFromOrigin: false,
+        appendSubHtmlTo: '.lg-item',
+        getCaptionFromTitleOrAlt: false,
+        preload: 2, 
+      });
+    }
+  })
+}
