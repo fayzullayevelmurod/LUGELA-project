@@ -1,0 +1,121 @@
+.certificates {
+  padding: 74px 0 91px 0;
+  position: relative;
+
+  .certificates_bottom_img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    @include tablet-993 {
+      display: none;
+    }
+  }
+
+  @include tablet-993 {
+    padding: 35px 0 44px 0;
+  }
+
+  .main_title {
+    margin-bottom: 50px;
+
+    @include tablet-993 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  }
+
+  &_left {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+  }
+
+  &_right {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+  }
+
+  &_in {
+    display: grid;
+    gap: 90px;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include tablet-993 {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 22px;
+    }
+  }
+
+  &_block {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    @include tablet-993 {
+      gap: 7px;
+      flex-direction: column;
+    }
+
+    span {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 24.4px;
+      text-align: left;
+      text-decoration-line: underline;
+      text-decoration-style: solid;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      color: #3E3E3E;
+
+      @include tablet-993 {
+        text-align: center;
+        font-size: 16px;
+        line-height: 21px;
+      }
+    }
+  }
+
+  &_block_imgs {
+    display: flex;
+    gap: 7px;
+  }
+
+  &_block_img {
+    position: relative;
+    width: 105px;
+    height: 145px;
+
+    .certificates_photo {
+      width: 100%;
+      padding: 3px;
+      border: 1px solid #BCBCBC;
+      height: 100%;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: rgba(91, 118, 75, 0.85);
+      transition: .3s linear;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      &:hover {
+        background: linear-gradient(135deg, rgba(91, 118, 75, 0.85) 17.78%, rgba(132, 162, 115, 0.85) 50.34%, rgba(96, 123, 80, 0.85) 82.22%);
+        box-shadow: 0px 4px 10px 0px rgba(129, 154, 115, 0.56);
+      }
+
+      &.active {
+        background: linear-gradient(137.25deg, rgba(120, 140, 108, 0.85) 14.58%, rgba(133, 162, 116, 0.85) 85.24%);
+      }
+    }
+  }
+}

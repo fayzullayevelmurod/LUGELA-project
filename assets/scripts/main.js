@@ -1,23 +1,40 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const gallery = document.querySelector('.lightgallery');
+  if (gallery) {
+      lightGallery(gallery, {
+          plugins: [lgThumbnail, lgZoom],
+          speed: 500,
+      });
+  }
+});
 
-let swiper = new Swiper(".treatmentsSwiper", {
-  slidesPerView: 1.10,
+// burger
+let media_menu = document.querySelector('.media_menu');
+let burger_btn = document.querySelector('.burger_btn');
+
+burger_btn.addEventListener('click', () => {
+  media_menu.classList.toggle('active');
+})
+// burger
+
+
+let swiper = new Swiper(".commentSwiper", {
+  slidesPerView: 1,
   spaceBetween: 28,
+  centeredSlides: true,
+  loop: true,
+  navigation: {
+    nextEl: ".comment-button-next",
+    prevEl: ".comment-button-prev",
+  },
   pagination: {
-    el: ".swiper-pagination",
+    el: ".comment-pagination",
     clickable: true,
   },
   breakpoints: {
-    640: {
-      slidesPerView: 2.2,
-      spaceBetween: 28,
-    },
-    993: {
-      slidesPerView: 3.2,
-      spaceBetween: 28,
-    },
     1200: {
-      slidesPerView: 3.6,
-      spaceBetween: 40,
+      slidesPerView: 1.9,
+      spaceBetween: 20,
     },
   },
 });

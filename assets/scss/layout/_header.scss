@@ -94,3 +94,29 @@
     }
   }
 }
+
+.media_menu {
+  position: fixed;
+  right: -100%;
+  top: 0;
+  width: 80%;
+  z-index: 5;
+  background-color: $color-white;
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: .3s linear;
+  box-shadow: 1px 4px 12px 0px #00000021;
+
+  &.active {
+    right: 0;
+  }
+
+  .header_link {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+  }
+}
