@@ -6,11 +6,11 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        
+
         @include desktop-1200 {
             padding: 94px 20px 85px;
         }
-        
+
         @include tablet-993 {
             padding-top: 0;
             padding-bottom: 36px;
@@ -159,7 +159,7 @@
         z-index: -1;
         width: 1440px;
         min-width: 1440px;
-        
+
         @include tablet-993 {
             display: none;
             bottom: 102px;
@@ -178,5 +178,100 @@
                 display: block;
             }
         }
+    }
+}
+
+.home_modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 80%;
+    display: none;
+    background-color: $color-white;
+
+    &.active {
+        display: block;
+    }
+
+    @include tablet-768 {
+        width: 95%;
+    }
+
+    h6 {
+        text-align: center;
+        font-family: $font-FrizQuadrataCTT;
+        font-size: 35px;
+        font-weight: 400;
+        line-height: 36px;
+        color: $color-white;
+
+        @include tablet-768 {
+            font-size: 24px;
+            line-height: 26px;
+        }
+    }
+
+    &_head {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        background-color: #5B764B;
+        box-shadow: 0px 4px 14px 0px #00000040;
+        position: relative;
+
+        @include tablet-768 {
+            height: 40px;
+        }
+
+        .home_modal_close {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            right: 10px;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+
+            @include tablet-768 {
+                width: 30px;
+                height: 30px;
+            }
+
+            svg {
+                width: 100%;
+                height: 100%;
+
+                path {
+                    stroke: $color-white;
+                }
+            }
+        }
+    }
+
+    &_content {
+        padding: 20px;
+        height: 600px;
+
+        @include tablet-768 {
+            height: 300px;
+        }
+    }
+}
+
+.home_modal_bg {
+    position: fixed;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    background: rgba(69, 69, 69, 0.53);
+
+    &.active {
+        display: block;
     }
 }
