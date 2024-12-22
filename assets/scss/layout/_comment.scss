@@ -56,8 +56,16 @@
     height: 72px;
     margin: 48px auto 0 auto;
 
+    img {
+      @include tablet-993 {
+        width: 48px;
+        height: 48px;
+      }
+    }
+
     @include tablet-993 {
-      width: 237px;
+      width: 227px;
+      height: 46px;
       gap: 12px;
       margin: 30px auto 0 auto;
     }
@@ -89,7 +97,7 @@
     height: auto;
     transition: .3s linear;
     position: relative;
-    
+
     &::before {
       content: '';
       position: absolute;

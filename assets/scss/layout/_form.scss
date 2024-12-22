@@ -54,7 +54,7 @@
 
   .main_btn {
     @include tablet-993 {
-      max-width: 196px;
+      width: 196px;
     }
   }
 
@@ -80,8 +80,28 @@
       background: $color-white;
       border-radius: 30px;
 
+      b {
+        font-weight: 400;
+
+        @include tablet-993 {
+          display: block;
+          margin: 5px auto 0 auto;
+          width: max-content;
+          background:
+          $color-white;
+          border-radius: 30px;
+          padding: 0 10px;
+
+          &:last-child {
+            margin-top: 5px;
+          }
+        }
+      }
+
       @include tablet-993 {
-        display: inline;
+        padding: 0;
+        display: block;
+        background: transparent;
       }
     }
   }

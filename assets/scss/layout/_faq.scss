@@ -7,18 +7,33 @@
     position: absolute;
     top: -85px;
     right: -386px;
+
+    @include tablet-993 {
+      top: -124px;
+      right: -303px;
+    }
   }
 
   .faq_bottom_img {
     position: absolute;
     bottom: 0;
     right: 0;
+
+    @include tablet-993 {
+      display: none;
+    }
   }
 
   .faq_bottom_left {
     position: absolute;
     bottom: 44px;
     left: 54px;
+
+    @include tablet-993 {
+      width: 100px;
+      left: 8px;
+      bottom: 26px;
+    }
   }
 
   @include tablet-993 {
@@ -36,10 +51,11 @@
 
   .accordion-container {
     padding: 10px;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     gap: 19px;
+    position: relative;
+    z-index: 2;
 
     @include tablet-993 {
       gap: 10px;

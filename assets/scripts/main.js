@@ -1,3 +1,22 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const gallery = document.querySelector('.lightgallery');
+  if (gallery) {
+      lightGallery(gallery, {
+          plugins: [lgThumbnail, lgZoom],
+          speed: 500,
+      });
+  }
+});
+
+// burger
+let media_menu = document.querySelector('.media_menu');
+let burger_btn = document.querySelector('.burger_btn');
+
+burger_btn.addEventListener('click', () => {
+  media_menu.classList.toggle('active');
+})
+// burger
+
 
 let swiper = new Swiper(".commentSwiper", {
   slidesPerView: 1,
