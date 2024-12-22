@@ -119,3 +119,9 @@
     }
   }
 }
+
+.lg-current .lg-image {
+  width: 80vw !important;
+  height: 80vh !important;
+  object-fit: contain;
+}

@@ -1938,6 +1938,13 @@ address {
   background: linear-gradient(137.25deg, rgba(120, 140, 108, 0.85) 14.58%, rgba(133, 162, 116, 0.85) 85.24%);
 }
 
+.lg-current .lg-image {
+  width: 80vw !important;
+  height: 80vh !important;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 @media (max-width: 993px) {
   .footer {
     padding: 25px 0 36px 0;
