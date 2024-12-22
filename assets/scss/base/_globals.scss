@@ -1,16 +1,18 @@
 @font-face {
   font-family: 'FrizQuadrataCTT';
-  src: url('../fonts/friz-quadrata-regular.ttf') format('truetype');
+  src: url('../fonts/friz-quadrata-regular.ttf') format('ttf');
   font-weight: normal;
   font-style: normal;
 }
 
-// @font-face {
-//   font-family: 'FrizQuadrataCTT';
-//   src: url('../fonts/FrizQuadrataCTT/frizquadratac.ttf') format('truetype');
-//   font-weight: normal;
-//   font-style: normal;
-// }
+@font-face {
+  font-family: 'FrizQuadrataCTT';
+  src: url('../fonts/FrizQuadrataCTT/frizquadratac.woff2') format('woff2'),
+  url('../fonts/FrizQuadrataCTT/frizquadratac.woff') format('woff'),
+  url('../fonts/FrizQuadrataCTT/frizquadratac.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
 
 * {
   margin: 0;
