@@ -66,6 +66,11 @@
     text-align: center;
     color: $color-dark-2;
 
+    @include tablet-993 {
+      font-size: 35px;
+      line-height: 36px;
+    }
+
     span {
       font-display: swap !important;
       margin: 0 auto;

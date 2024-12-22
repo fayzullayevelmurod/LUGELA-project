@@ -793,6 +793,12 @@ address {
   text-align: center;
   color: #2E2E2E;
 }
+@media (max-width: 993px) {
+  .form h6 {
+    font-size: 35px;
+    line-height: 36px;
+  }
+}
 .form h6 span {
   font-display: swap !important;
   margin: 0 auto;
@@ -963,6 +969,36 @@ address {
 @media (max-width: 993px) {
   .comment {
     padding: 35px 0 65px 0;
+  }
+}
+.comment .container {
+  position: relative;
+}
+.comment .comment_top_img {
+  position: absolute;
+  bottom: -33px;
+  left: 100px;
+}
+@media (max-width: 993px) {
+  .comment .comment_top_img {
+    right: -15px;
+    left: auto;
+    top: -40px;
+    bottom: auto;
+    width: 75px;
+  }
+}
+.comment .comment_bottom_img {
+  position: absolute;
+  top: -52px;
+  right: 100px;
+}
+@media (max-width: 993px) {
+  .comment .comment_bottom_img {
+    left: -10px;
+    top: auto;
+    bottom: 85px;
+    width: 75px;
   }
 }
 .comment .main_title {

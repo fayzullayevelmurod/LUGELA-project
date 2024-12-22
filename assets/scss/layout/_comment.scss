@@ -6,6 +6,37 @@
     padding: 35px 0 65px 0;
   }
 
+  .container {
+    position: relative;
+  }
+
+  .comment_top_img {
+    position: absolute;
+    bottom: -33px;
+    left: 100px;
+
+    @include tablet-993 {
+      right: -15px;
+      left: auto;
+      top: -40px;
+      bottom: auto;
+      width: 75px;
+    }
+  }
+
+  .comment_bottom_img {
+    position: absolute;
+    top: -52px;
+    right: 100px;
+
+    @include tablet-993 {
+      left: -10px;
+      top: auto;
+      bottom: 85px;
+      width: 75px;
+    }
+  }
+
   .main_title {
     margin-bottom: 50px;
     text-align: center;
@@ -58,7 +89,7 @@
     height: auto;
     transition: .3s linear;
     position: relative;
-
+    
     &::before {
       content: '';
       position: absolute;
